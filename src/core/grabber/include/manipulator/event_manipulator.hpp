@@ -536,7 +536,14 @@ private:
       modifier_flag_manager_.manipulate(modifier_flag, operation);
 
       auto flags = modifier_flag_manager_.get_io_option_bits(key_code);
-      event_dispatcher_manager_.post_modifier_flags(key_code, flags, keyboard_type);
+      if (key_code == krbn::key_code::vk_hyper_modifier) {
+        event_dispatcher_manager_.post_modifier_flags(krbn::key_code(kHIDUsage_KeyboardLeftControl), flags, keyboard_type);
+        event_dispatcher_manager_.post_modifier_flags(krbn::key_code(kHIDUsage_KeyboardLeftShift), flags, keyboard_type);
+        event_dispatcher_manager_.post_modifier_flags(krbn::key_code(kHIDUsage_KeyboardLeftAlt), flags, keyboard_type);
+        event_dispatcher_manager_.post_modifier_flags(krbn::key_code(kHIDUsage_KeyboardLeftGUI), flags, keyboard_type);
+      } else {
+        event_dispatcher_manager_.post_modifier_flags(key_code, flags, keyboard_type);
+      }
 
       modifier_flag_manager_.reset_standalone();
       return true;
