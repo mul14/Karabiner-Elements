@@ -49,6 +49,7 @@ enum class key_code : uint32_t {
   // 0x00 - 0xff are keys in keyboard_or_keypad usage page.
   return_or_enter = kHIDUsage_KeyboardReturnOrEnter,
   delete_or_backspace = kHIDUsage_KeyboardDeleteOrBackspace,
+  spacebar = kHIDUsage_KeyboardSpacebar,
   caps_lock = kHIDUsage_KeyboardCapsLock,
 
   f1 = kHIDUsage_KeyboardF1,
@@ -99,6 +100,16 @@ enum class key_code : uint32_t {
   keypad_period = kHIDUsage_KeypadPeriod,
   keypad_equal_sign = kHIDUsage_KeypadEqualSign,
   keypad_comma = kHIDUsage_KeypadComma,
+
+  u = kHIDUsage_KeyboardU,
+  i = kHIDUsage_KeyboardI,
+  o = kHIDUsage_KeyboardO,
+  h = kHIDUsage_KeyboardH,
+  j = kHIDUsage_KeyboardJ,
+  k = kHIDUsage_KeyboardK,
+  l = kHIDUsage_KeyboardL,
+  b = kHIDUsage_KeyboardB,
+  n = kHIDUsage_KeyboardN,
 
   home = kHIDUsage_KeyboardHome,
   page_up = kHIDUsage_KeyboardPageUp,

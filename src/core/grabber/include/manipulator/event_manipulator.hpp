@@ -174,16 +174,35 @@ public:
           key_code = krbn::key_code::delete_forward;
           break;
         case krbn::key_code::right_arrow:
+        case krbn::key_code::o:
           key_code = krbn::key_code::end;
           break;
         case krbn::key_code::left_arrow:
+        case krbn::key_code::u:
           key_code = krbn::key_code::home;
           break;
         case krbn::key_code::down_arrow:
+        case krbn::key_code::n:
           key_code = krbn::key_code::page_down;
           break;
         case krbn::key_code::up_arrow:
+        case krbn::key_code::h:
           key_code = krbn::key_code::page_up;
+          break;
+        case krbn::key_code::i:
+          key_code = krbn::key_code::up_arrow;
+          break;
+        case krbn::key_code::j:
+          key_code = krbn::key_code::left_arrow;
+          break;
+        case krbn::key_code::k:
+          key_code = krbn::key_code::down_arrow;
+          break;
+        case krbn::key_code::l:
+          key_code = krbn::key_code::right_arrow;
+          break;
+        case krbn::key_code::b:
+          key_code = krbn::key_code::spacebar;
           break;
         default:
           break;
